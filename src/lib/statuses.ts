@@ -7,7 +7,6 @@ export const getStatuses = (
   guesses: string[]
 ): { [key: string]: CharStatus } => {
   const charObj: { [key: string]: CharStatus } = {}
-  debugger
   guesses.forEach((guess) => {
     unicodeSplit(guess).forEach((number, i) => {
       if (!solution.includes(number)) {

@@ -18,5 +18,5 @@ const generateValidDates = (startDate: Date, endDate: Date): string[] => {
 }
 
 const startDate = new Date('2023-11-03')
-const endDate = new Date('2026-12-31')
+const endDate = new Date('2030-12-31')
 export const VALID_GUESSES = generateValidDates(startDate, endDate)
