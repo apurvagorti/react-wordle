@@ -32,7 +32,7 @@ export const CompletedRow = ({ solution, guess, isRevealing }: Props) => {
       elements.push(
         <div
           key={`dash-${i}`}
-          className="dash flex items-center p-3 dark:text-white"
+          className="dash flex items-center p-3 dark:text-[#525c2b]"
         >
           {' '}
           <svg

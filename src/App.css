@@ -1,5 +1,5 @@
 html.dark {
-  background-color: rgb(15, 23, 42);
+  background-color: #525c2b;
   /* Set the path to your image */
   background-image: url('../public/arch-dark.svg');
 
@@ -9,7 +9,7 @@ html.dark {
 }
 
 html {
-  background-color: #eaecd5;
+  background-color: #bdc797;
   /* Set the path to your image */
   background-image: url('../public/arch.svg');
 

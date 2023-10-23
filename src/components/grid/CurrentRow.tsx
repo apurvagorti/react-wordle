@@ -23,7 +23,7 @@ export const CurrentRow = ({ guess, className }: Props) => {
       elements.push(
         <span
           key={`dash-${i}`}
-          className="dash flex items-center p-3 dark:text-white"
+          className="dash flex items-center p-3 dark:text-[#525c2b]"
         >
           {' '}
           <svg

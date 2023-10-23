@@ -12,7 +12,10 @@ export const EmptyRow = () => {
         // Insert a dash after every 3rd position (0-based index)
         if ((i + 1) % 3 === 0 && i !== totalLength - 1) {
           return (
-            <div key={i} className="dash flex items-center p-3 dark:text-white">
+            <div
+              key={i}
+              className="dash flex items-center p-3 dark:text-[#525c2b]"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"

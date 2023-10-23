@@ -26,21 +26,21 @@ export const Navbar = ({
       <div className="navbar-content px-5 short:h-auto">
         <div className="flex">
           <InformationCircleIcon
-            className="h-6 w-6 cursor-pointer bg-[#eaecd5] dark:bg-transparent dark:stroke-white"
+            className="h-6 w-6 cursor-pointer bg-[#bdc797] dark:bg-black dark:stroke-white"
             onClick={() => setIsInfoModalOpen(true)}
           />
         </div>
-        <p className="bg-[#eaecd5] text-xl font-bold dark:bg-transparent dark:text-white">
+        <p className="bg-[#bdc797] text-xl font-bold dark:bg-black dark:text-white">
           {GAME_TITLE}
         </p>
         <div className="right-icons">
           <CogIcon
-            className="h-6 w-6 cursor-pointer bg-[#eaecd5] dark:bg-transparent dark:stroke-white"
+            className="h-6 w-6 cursor-pointer bg-[#bdc797] dark:bg-black dark:stroke-white"
             onClick={() => setIsSettingsModalOpen(true)}
           />
         </div>
       </div>
-      <hr></hr>
+      <hr className="border-none"></hr>
     </div>
   )
 }
