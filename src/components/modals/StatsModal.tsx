@@ -76,11 +76,15 @@ export const StatsModal = ({
   return (
     <BaseModal title={''} isOpen={isOpen} handleClose={handleClose}>
       <div className="mb-4">
-        <img src={image} alt="Descriptive alt text" className="rounded" />
+        <img
+          src={image}
+          alt="Apurva and Akhil happily engaged"
+          className="rounded pt-4"
+        />
       </div>
-      <h2 className="font-sail text-4xl">Apurva & Akhil</h2>
-      <h2 className="font-sail text-2xl">October 26, 2024</h2>
-      <h2 className="font-sail text-2xl">Napa, California</h2>
+      <h2 className="font-sail text-4xl dark:text-white">Apurva & Akhil</h2>
+      <h2 className="font-sail text-2xl dark:text-white">October 26, 2024</h2>
+      <h2 className="text-2x font-sail dark:text-white">Napa, California</h2>
       {(isGameLost || isGameWon) && (
         <div className="mt-5 flex columns-2 items-center items-stretch justify-center text-center dark:text-white sm:mt-6">
           <button
