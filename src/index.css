@@ -291,3 +291,43 @@ svg.cursor-pointer:hover {
 .react-datepicker__day--range-end {
   @apply bg-indigo-600 text-white hover:bg-white hover:text-gray-700;
 }
+
+@font-face {
+  font-family: 'Poiret'; /* You can name this whatever you prefer */
+  src: url('../public/fonts/PoiretOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* Add other font properties if necessary, like font-display */
+}
+
+@font-face {
+  font-family: 'Lato'; /* You can name this whatever you prefer */
+  src: url('../public/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* Add other font properties if necessary, like font-display */
+}
+
+@font-face {
+  font-family: 'Lato-Bold'; /* You can name this whatever you prefer */
+  src: url('../public/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* Add other font properties if necessary, like font-display */
+}
+
+@font-face {
+  font-family: 'Lato-Light'; /* You can name this whatever you prefer */
+  src: url('../public/fonts/Lato-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* Add other font properties if necessary, like font-display */
+}
+
+@font-face {
+  font-family: 'Sail'; /* You can name this whatever you prefer */
+  src: url('../public/fonts/Sail-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* Add other font properties if necessary, like font-display */
+}

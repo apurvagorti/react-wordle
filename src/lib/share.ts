@@ -20,10 +20,14 @@ export const shareStatus = (
   handleShareToClipboard: () => void,
   handleShareFailure: () => void
 ) => {
+  const randomMessage =
+    Math.random() > 0.5
+      ? `I guessed when Apurva is getting #LicensedToAkhil!`
+      : `I guessed when Akhil is getting #WifedAp!`
   const textToShare =
-    `${GAME_TITLE} ${solutionIndex} ${
-      lost ? 'X' : guesses.length
-    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
+    `${randomMessage} ${lost ? 'X' : guesses.length}/${MAX_CHALLENGES}${
+      isHardMode ? '*' : ''
+    }\n\n` +
     generateEmojiGrid(
       solution,
       guesses,

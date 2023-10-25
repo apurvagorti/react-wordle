@@ -18,8 +18,8 @@ export const Alert = ({
   const classes = classNames(
     'fixed z-20 top-14 left-1/2 transform -translate-x-1/2 max-w-sm shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
-      'bg-rose-500 text-white': variant === 'error',
-      'bg-blue-500 text-white': variant === 'success',
+      'bg-red-500 text-white font-lato': variant === 'error',
+      'bg-yellow-500 text-white font-lato': variant === 'success',
     }
   )
 
@@ -36,7 +36,7 @@ export const Alert = ({
     >
       <div className={classes}>
         <div className="p-2">
-          <p className="text-center text-sm font-medium">{message}</p>
+          <p className="text-center text-xl font-medium">{message}</p>
         </div>
       </div>
     </Transition>

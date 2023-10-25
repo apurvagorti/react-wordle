@@ -1,4 +1,5 @@
 import { ClockIcon, ShareIcon } from '@heroicons/react/outline'
+import { AddToCalendarButton } from 'add-to-calendar-button-react'
 import { format } from 'date-fns'
 import Countdown from 'react-countdown'
 
@@ -73,22 +74,18 @@ export const StatsModal = ({
     )
   }
   return (
-    <BaseModal
-      title={STATISTICS_TITLE}
-      isOpen={isOpen}
-      handleClose={handleClose}
-    >
-      <h2>Apurva and Akhil</h2>
-      <h2>October 26, 2024</h2>
-      <h2>Napa, California</h2>
+    <BaseModal title={''} isOpen={isOpen} handleClose={handleClose}>
       <div className="mb-4">
         <img src={image} alt="Descriptive alt text" className="rounded" />
       </div>
+      <h2 className="font-sail text-4xl">Apurva & Akhil</h2>
+      <h2 className="font-sail text-2xl">October 26, 2024</h2>
+      <h2 className="font-sail text-2xl">Napa, California</h2>
       {(isGameLost || isGameWon) && (
-        <div className="mt-5 columns-2 items-center items-stretch justify-center text-center dark:text-white sm:mt-6">
+        <div className="mt-5 flex columns-2 items-center items-stretch justify-center text-center dark:text-white sm:mt-6">
           <button
             type="button"
-            className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-center text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-base"
+            className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-sky-500 px-4 py-2 text-center font-lato text-sm font-medium text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-base"
             onClick={() => {
               shareStatus(
                 solution,
@@ -105,6 +102,17 @@ export const StatsModal = ({
             <ShareIcon className="mr-2 h-6 w-6 cursor-pointer dark:stroke-white" />
             {SHARE_TEXT}
           </button>
+          <AddToCalendarButton
+            name="Apurva and Akhil's Wedding"
+            options={['Apple', 'Google']}
+            location="Napa, California"
+            startDate="2024-10-26"
+            timeZone="America/Los_Angeles"
+            hideCheckmark={true}
+            hideTextLabelButton={true}
+            hideTextLabelList={true}
+            listStyle="dropup-static"
+          ></AddToCalendarButton>
         </div>
       )}
     </BaseModal>
