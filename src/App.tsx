@@ -22,7 +22,9 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
+  WINNER_REFRESH_TIME_MS,
 } from './constants/settings'
+import { GAME_TITLE } from './constants/strings'
 import {
   CORRECT_WORD_MESSAGE,
   DISCOURAGE_INAPP_BROWSER_TEXT,
@@ -285,16 +287,18 @@ function App() {
         />
 
         {!isLatestGame && (
-          <div className="font-custom flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <ClockIcon className="h-6 w-6 stroke-gray-600 dark:stroke-gray-300" />
             <p className="text-base text-gray-600 dark:text-gray-300">
               {format(gameDate, 'd MMMM yyyy', { locale: DATE_LOCALE })}
             </p>
           </div>
         )}
-
-        <div className="grid-container mx-auto flex w-full grow flex-col pt-2 pb-8 sm:px-6 md:max-w-7xl lg:px-8 short:pb-2 short:pt-2">
+        <div className="grid-container mx-auto flex w-full grow flex-col px-1 pt-2 pb-8 sm:px-6 md:max-w-7xl lg:px-8 short:pb-2 short:pt-2">
           <div className="flex grow flex-col justify-center pb-6 short:pb-2">
+            <h2 className="align-center mx-auto w-min justify-center rounded-xl bg-[#bdc797] pb-5 font-sail text-5xl font-bold dark:bg-black dark:text-white">
+              {GAME_TITLE}
+            </h2>
             <Grid
               solution={solution}
               guesses={guesses}
@@ -303,14 +307,26 @@ function App() {
               currentRowClassName={currentRowClass}
             />
           </div>
-          <Keyboard
-            onChar={onChar}
-            onDelete={onDelete}
-            onEnter={onEnter}
-            solution={solution}
-            guesses={guesses}
-            isRevealing={isRevealing}
-          />
+          {!isGameWon && (
+            <Keyboard
+              onChar={onChar}
+              onDelete={onDelete}
+              onEnter={onEnter}
+              solution={solution}
+              guesses={guesses}
+              isRevealing={isRevealing}
+            ></Keyboard>
+          )}
+          {isGameWon && (
+            <>
+              <h2 className="mx-auto font-lato-light text-3xl dark:text-white">
+                #LicensedToAkhil
+              </h2>
+              <h2 className="mx-auto font-lato-light text-3xl dark:text-white">
+                #WifedAp
+              </h2>
+            </>
+          )}
           <InfoModal
             isOpen={isInfoModalOpen}
             handleClose={() => setIsInfoModalOpen(false)}
