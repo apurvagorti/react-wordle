@@ -1,26 +1,11 @@
-import { ClockIcon, ShareIcon } from '@heroicons/react/outline'
-import { AddToCalendarButton } from 'add-to-calendar-button-react'
-import { format } from 'date-fns'
-import Countdown from 'react-countdown'
+import { ShareIcon } from '@heroicons/react/outline'
 
-import {
-  DATE_LOCALE,
-  ENABLE_ARCHIVED_GAMES,
-  ENABLE_MIGRATE_STATS,
-} from '../../constants/settings'
-import {
-  ARCHIVE_GAMEDATE_TEXT,
-  GUESS_DISTRIBUTION_TEXT,
-  NEW_WORD_TEXT,
-  SHARE_TEXT,
-  STATISTICS_TITLE,
-} from '../../constants/strings'
+import { ENABLE_MIGRATE_STATS } from '../../constants/settings'
+import { SHARE_TEXT, STATISTICS_TITLE } from '../../constants/strings'
 import image from '../../images/couple.jpeg'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
 import { addToCalendar } from '../../lib/stats'
-import { solutionGameDate, tomorrow } from '../../lib/words'
-import { Histogram } from '../stats/Histogram'
 import { MigrationIntro } from '../stats/MigrationIntro'
 import { StatBar } from '../stats/StatBar'
 import { BaseModal } from './BaseModal'
@@ -49,7 +34,6 @@ export const StatsModal = ({
   solution,
   guesses,
   gameStats,
-  isLatestGame,
   isGameLost,
   isGameWon,
   handleShareToClipboard,
@@ -58,7 +42,6 @@ export const StatsModal = ({
   isHardMode,
   isDarkMode,
   isHighContrastMode,
-  numberOfGuessesMade,
 }: Props) => {
   if (gameStats.totalGames <= 0) {
     return (

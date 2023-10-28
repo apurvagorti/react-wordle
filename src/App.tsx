@@ -22,7 +22,6 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
-  WINNER_REFRESH_TIME_MS,
 } from './constants/settings'
 import { GAME_TITLE } from './constants/strings'
 import {

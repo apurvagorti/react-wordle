@@ -1,12 +1,4 @@
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  CogIcon,
-  InformationCircleIcon,
-} from '@heroicons/react/outline'
-
-import { ENABLE_ARCHIVED_GAMES } from '../../constants/settings'
-import { GAME_TITLE } from '../../constants/strings'
+import { CogIcon, InformationCircleIcon } from '@heroicons/react/outline'
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
@@ -17,8 +9,6 @@ type Props = {
 
 export const Navbar = ({
   setIsInfoModalOpen,
-  setIsStatsModalOpen,
-  setIsDatePickerModalOpen,
   setIsSettingsModalOpen,
 }: Props) => {
   return (

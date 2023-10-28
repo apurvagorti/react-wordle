@@ -11,8 +11,6 @@ type Props = {
 export const CompletedRow = ({ solution, guess, isRevealing }: Props) => {
   const statuses = getGuessStatuses(solution, guess)
   const splitGuess = unicodeSplit(guess)
-  const dashesToAdd = Math.floor(solution.length / 2) - 1
-  const totalLength = solution.length + dashesToAdd
 
   const elements: JSX.Element[] = []
   splitGuess.forEach((letter, i) => {

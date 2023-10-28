@@ -2,7 +2,6 @@ import {
   HARD_MODE_DESCRIPTION,
   HIGH_CONTRAST_MODE_DESCRIPTION,
 } from '../../constants/strings'
-import { Key } from '../keyboard/Key'
 import { BaseModal } from './BaseModal'
 import { SettingsToggle } from './SettingsToggle'
 
