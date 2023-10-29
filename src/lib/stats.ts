@@ -142,8 +142,7 @@ export const addToCalendar = () => {
     forceOverlay?: boolean
   } = {
     name: "Apurva and Akhil's Wedding",
-    description:
-      'Check out the maybe easiest way to include Add to Calendar Buttons to your web projects:[br]→ [url]https://add-to-calendar-button.com/',
+    description: 'We are so excited to celebrate with you!',
     startDate: '2024-10-26',
     options: ['Google', 'iCal'],
     timeZone: 'America/Los_Angeles',
